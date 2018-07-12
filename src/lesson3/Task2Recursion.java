@@ -19,6 +19,7 @@ public class Task2Recursion {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число:");
         int number = Integer.parseInt(reader.readLine());
         for (int i = 0; ; i++) {
             int fibonacci = recursion(i);

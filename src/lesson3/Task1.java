@@ -14,7 +14,8 @@ public class Task1 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите число:");
         int number = Integer.parseInt(reader.readLine());
-        System.out.println(recursion(number));
+        System.out.println("Сумма цифр данного числа: " + recursion(number));
     }
 }
