@@ -21,7 +21,7 @@ public class Task1 {
     }
 
     public static void formatDate(int day, int month, int year) {
-        if (month >= 1 && month <= 12) {
+
             switch (month) {
                 case 1:
                 case 3:
@@ -73,12 +73,10 @@ public class Task1 {
                         System.out.println("Дата неверная");
                     }
                     break;
+                default:
+                    System.out.println("Дата неверная");
 
             }
-        } else {
-            System.out.println("Дата неверная");
-        }
-
         System.out.println(day + "." + month + "." + year);
     }
 }

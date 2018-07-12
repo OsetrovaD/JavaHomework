@@ -5,21 +5,25 @@ import java.util.Scanner;
 public class Task3 {
 
     public static void main(String[] args) {
-        Scanner n1=new Scanner(System.in);
-        int i = n1.nextInt();
-        int j = n1.nextInt();
-        int k = n1.nextInt();
-        double discriminant = discriminant(i, j, k);
+        Scanner n1 = new Scanner(System.in);
+        System.out.println("Квадратное уравнение вида ax ² + bx + c = 0.\nВведите а:" );
+        int a = n1.nextInt();
+
+        System.out.println("Введите b:" );
+        int b = n1.nextInt();
+
+        System.out.println("Введите c:" );
+        int c = n1.nextInt();
+
+        double discriminant = discriminant(a, b, c);
+
         if (isPositive(discriminant)){
-            double x1;
-            double x2;
-            x1 = (-j+Math.sqrt(discriminant))/(2*i);
-            x2 = (-j-Math.sqrt(discriminant))/(2*i);
-            System.out.println("Корни уравнения: " + x1 + ", " + x2);
+            double x1 = (-b+Math.sqrt(discriminant))/(2*a);
+            double x2 = (-b-Math.sqrt(discriminant))/(2*a);
+            System.out.println("Дискриминант больше нуля. Корни уравнения: " + x1 + ", " + x2);
         }
         else if (isZero(discriminant)){
-            double x1;
-            x1 = (-j)/(2.0*i);
+            double x1 = (-b)/(2.0*a);
             System.out.println("Дискриминант равен нулю. Корень уравнения: " + x1);
         }
         else if (!isPositive(discriminant)){
@@ -34,7 +38,7 @@ public class Task3 {
     public static boolean isPositive(double discriminant){
         return discriminant > 0;
     }
-    
+
     public static boolean isZero(double discriminant){
         return discriminant == 0;
     }
