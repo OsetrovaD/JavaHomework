@@ -29,7 +29,6 @@ public class Task1 {
             case 7:
             case 8:
             case 10:
-            case 12:
                 if (day >= 1 && day < 31) {
                     day++;
                 } else if (day == 31) {
@@ -69,6 +68,17 @@ public class Task1 {
                 } else if (day == 30) {
                     day = 1;
                     month++;
+                } else {
+                    System.out.println("Дата неверная");
+                }
+                break;
+            case 12:
+                if (day >= 1 && day < 31) {
+                    day++;
+                } else if (day == 31) {
+                    day = 1;
+                    month = 1;
+                    year++;
                 } else {
                     System.out.println("Дата неверная");
                 }
