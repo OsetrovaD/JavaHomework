@@ -55,7 +55,7 @@ public class Task4 {
 
     }
 
-    public static int[] linearize(int[][] twoDimensionalArray){
+    public static int[] linearize(int[][] twoDimensionalArray) {
         int numberOfItems = 0;
         for (int i = 0; i < twoDimensionalArray.length; i++) {
             for (int j = 0; j < twoDimensionalArray[i].length; j++) {
