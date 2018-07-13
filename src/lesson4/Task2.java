@@ -19,19 +19,24 @@ public class Task2 {
     }
 
     public static int[] removeIdenticalValues(int[] numbers) {
-        int count = 0;
-        int indexOfTempArray = 0;
         int indexOfMainArray = 0;
+
         for (int i = 0; i < numbers.length; i++) {
+            int count = 0;
+            int indexOfTempArray = 0;
+
             for (int j = i + 1; j < numbers.length; j++) {
                 if (numbers[i] == numbers[j]) {
                     count++;
                 }
             }
             int[] temp = new int[numbers.length - count];
+
             for (int j = 0; j < numbers.length; ) {
-                if (numbers[indexOfMainArray] == numbers[j] && indexOfMainArray != j) {
-                    j++;
+                if (j > indexOfMainArray) {
+                    if (numbers[indexOfMainArray] == numbers[j]) {
+                        j++;
+                    }
                 }
                 if (j == numbers.length)
                     break;
@@ -41,8 +46,6 @@ public class Task2 {
             }
             numbers = temp;
             indexOfMainArray++;
-            indexOfTempArray = 0;
-            count = 0;
         }
         return numbers;
     }
